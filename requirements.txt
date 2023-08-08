@@ -41,7 +41,7 @@ scipy
 seaborn
 six
 sniffio
-starlette
+starlette==0.27.0
 threadpoolctl
 typing_extensions
 tzdata
