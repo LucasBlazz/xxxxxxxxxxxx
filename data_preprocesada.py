@@ -26,7 +26,8 @@ df.dropna(subset=["release_date"], inplace=True)
 df["year_release"] = df["release_date"].dt.year
 
 
-
+anio_mas_reciente = int(df["year_release"].max())
+anio_mas_antiguo = int(df["year_release"].min())
 
 # Dataset para la funcion GENERO
 df_genero = df.copy()
