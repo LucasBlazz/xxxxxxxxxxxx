@@ -52,8 +52,8 @@ app = FastAPI(
 async def genero(
     year: int = Path(
     title="Año",
-    ge= anio_mas_antiguo,
-    le= anio_mas_reciente,
+    ge= anio_mas_antiguo-1,
+    le= anio_mas_reciente+1,
     example=2016
     )
 ):
@@ -91,8 +91,8 @@ async def genero(
 async def juegos(
     year: int = Path(
     title="Año",
-    ge= anio_mas_antiguo,
-    le= anio_mas_reciente,
+    ge= anio_mas_antiguo-1,
+    le= anio_mas_reciente+1,
     example=2004
     )
 ):
@@ -130,8 +130,8 @@ async def juegos(
 async def specs(
     year: int = Path(
     title="Año",
-    ge= anio_mas_antiguo,
-    le= anio_mas_reciente,
+    ge= anio_mas_antiguo-1,
+    le= anio_mas_reciente+1,
     example=2017
     )
 ):
@@ -169,8 +169,8 @@ async def specs(
 async def early_access(
     year: int = Path(
     title="Año",
-    ge= anio_mas_antiguo,
-    le= anio_mas_reciente,
+    ge= anio_mas_antiguo-1,
+    le= anio_mas_reciente+1,
     example=2018
     )
 ):
@@ -203,8 +203,8 @@ async def early_access(
 async def sentiment(
     year: int = Path(
     title="Año",
-    ge= anio_mas_antiguo,
-    le= anio_mas_reciente,
+    ge= anio_mas_antiguo-1,
+    le= anio_mas_reciente+1,
     example=2000
     )
 ):
@@ -239,8 +239,8 @@ async def sentiment(
 async def metascore(
     year: int = Path(
     title="Año",
-    ge= anio_mas_antiguo,
-    le= anio_mas_reciente,
+    ge= anio_mas_antiguo-1,
+    le= anio_mas_reciente+1,
     example=2015
     )
 ):
