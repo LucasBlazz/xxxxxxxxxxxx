@@ -1,7 +1,7 @@
 # Proyecto individual MLOps
 ### Esta es mi solución a la propuesta de trabajo dictada por Henry
 
-![api](https://imgur.com/a/CJjYIpZ)
+![api](https://drive.google.com/file/d/18-STyrV8-wvr53NC-eEevXrVZdM1kBIH/view?usp=sharing)
 
 Para ver la consigna del proyecto visitar el [repositorio](https://github.com/soyHenry/PI_ML_OPS/tree/ft).
 
