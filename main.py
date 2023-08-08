@@ -4,29 +4,13 @@ from fastapi import FastAPI, Path
 import pandas as pd
 import joblib
 
-import funciones_auxiliares as fa
-from data_preprocesada import df_genero, df_juegos, df_specs, df_early_access, df_sentiment, df_metascore
-from data_preprocesada import anio_mas_antiguo, anio_mas_reciente
-from eda import rmse
-
-"""
-TODO:
-    - Agregar el path parameter a las def
-    - Retornar mensaje cuando sea nulo
-    - Documentar api
-"""
+import scripts.funciones_auxiliares as fa
+from scripts.data_preprocesada import df_genero, df_juegos, df_specs, df_early_access, df_sentiment, df_metascore
+from scripts.data_preprocesada import anio_mas_antiguo, anio_mas_reciente
 
 
 
-
-app = FastAPI(
-    title="PI MLOps",
-    version="1.0.0",
-    description="Resolución del primer proyecto individual por Lucas Ramos. GITHUB https://github.com/LucasBlazz",
-)
-
-
-modelo = joblib.load("modelo_precio_videojuego.pkl")
+modelo = joblib.load("scripts/modelo_precio_videojuego.pkl")
 
 
 class OpcionGenero(str, Enum):
@@ -54,6 +38,11 @@ class OpcionGenero(str, Enum):
     Web_Publishing = "Web Publishing"
 
 
+app = FastAPI(
+    title="PI MLOps",
+    version="1.0.0",
+    description="Resolución del primer proyecto individual por Lucas Ramos. GITHUB https://github.com/LucasBlazz",
+)
 
 @app.get(
     path="/genero/{year}",
@@ -318,5 +307,5 @@ async def predict(genero: OpcionGenero, early_access: bool):
 
     return {
         "Predicción precio": f"{round(prediccion[0],2)} Dólares",
-        "RMSE":rmse
+        "RMSE": 8.424571637950317
         }
